@@ -13,7 +13,7 @@ const Donate = (props) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    alert(`${inputs.username} 贊助了 ${inputs.channelname} ${inputs.amount}元！`);
+    alert(`${inputs.username} 贊助了 ${inputs.channelname} ${inputs.amount}元！ \n訊息： ${inputs.message}`);
   }
   useEffect(() =>{
     if(channel.state){
@@ -41,6 +41,7 @@ const Donate = (props) => {
       <input 
         type="text" 
         name="username" 
+        required="required"
         value={inputs.username || ""} 
         onChange={handleChange}
       />
@@ -49,12 +50,13 @@ const Donate = (props) => {
         <input 
           type="number" 
           name="amount" 
+          required="required"
           value={inputs.amount || ""} 
           onChange={handleChange}
         />
         </label>
         <label>訊息
-      <input 
+      <textarea 
         type="text" 
         name="message" 
         value={inputs.message || ""} 
