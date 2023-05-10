@@ -5,6 +5,7 @@ import Title from './components/title';
 import Home from './pages/home';
 import About from './pages/about';
 import Channels from './pages/channels';
+import Donate from './pages/donate';
 import Dashboard from './pages/dashboard';
 import Login from './pages/login';
 import Sidebarmenu from './components/Sidebarmenu';
@@ -21,6 +22,7 @@ function App() {
           <Route path="/" element={<Home />}/>
           <Route path="/About" element={<About />}/>
           <Route path="/Channels" element={<Channels />}/>
+          <Route path="/Donate" element={<Donate />}/>
           <Route path="/Dashboard" element={<Dashboard />}/>
           <Route path="/Login" element={<Login />}/>
         </Routes>

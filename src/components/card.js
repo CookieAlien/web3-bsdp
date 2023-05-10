@@ -21,7 +21,7 @@ const Card = (props) => {
       </div>
       <div className="card-links">
         <Link to='/About'><button>實況連結</button></Link>
-        <Link to='/About'><button>點我贊助</button></Link>
+        <Link to='/Donate' state={props.title}><button>點我贊助</button></Link>
       </div>
     </article>
   );
