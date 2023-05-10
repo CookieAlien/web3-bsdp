@@ -25,3 +25,9 @@ input[type=submit] {
     -webkit-border-radius: 5px;
     border-radius: 5px; 
 }
+
+@media (max-width: 600px) {
+    form{
+        width: 90%;
+    }
+}
