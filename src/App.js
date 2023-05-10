@@ -2,11 +2,11 @@ import React from 'react';
 import {BrowserRouter as Router,Routes,Route} from "react-router-dom";
 import './App.css';
 import Title from './components/title';
-import Home from './components/home';
-import About from './components/about';
-import Channels from './components/channels';
-import Dashboard from './components/dashboard';
-import Login from './components/login';
+import Home from './pages/home';
+import About from './pages/about';
+import Channels from './pages/channels';
+import Dashboard from './pages/dashboard';
+import Login from './pages/login';
 import Sidebarmenu from './components/Sidebarmenu';
 
 function App() {
