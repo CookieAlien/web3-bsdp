@@ -26,7 +26,6 @@ const Donate = (props) => {
   return (
     <div>
       <h1>贊助</h1>
-      <p>{channel.state}</p>
       <form onSubmit={handleSubmit}>
       <label>贊助對象
       <input 

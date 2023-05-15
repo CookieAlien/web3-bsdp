@@ -5,3 +5,9 @@
     flex-wrap: wrap;
     justify-items: center;
   }
+.no-result{
+  margin-left: -60px;
+  display: block;
+  width: 100vw;
+  font-size: 28px;
+}

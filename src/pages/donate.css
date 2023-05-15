@@ -18,6 +18,8 @@ input{
 textarea{
     font-size: 1em;
     display: block;
+    height: 5em;
+    width: 50%;
     padding: 3px;
     margin-top: 0.5em;
     margin-bottom: 0.5em;
