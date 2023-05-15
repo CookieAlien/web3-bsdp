@@ -16,3 +16,19 @@
     font-weight: bold;
     border-radius: 10px;
 }
+@media only screen and (max-width: 1000px) {
+    .links{
+        margin-left: -30vw;
+    }
+    .linkbtn{
+        width: 60vw;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .links{
+        margin-left: -48vw;
+    }
+    .linkbtn{
+        width: 96vw;
+    }
+}

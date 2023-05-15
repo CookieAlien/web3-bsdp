@@ -1,12 +1,11 @@
 .channel-cards {
     display: flex;
-    margin-left: 60px;
+    width: 100vw;
     gap: 10px;
     flex-wrap: wrap;
-    justify-items: center;
+    justify-content: center;
   }
 .no-result{
-  margin-left: -60px;
   display: block;
   width: 100vw;
   font-size: 28px;
