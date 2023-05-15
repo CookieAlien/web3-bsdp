@@ -10,3 +10,7 @@
   width: 100vw;
   font-size: 28px;
 }
+input{
+  width: 300px;
+  align-items: center;
+}
