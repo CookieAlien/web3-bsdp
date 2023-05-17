@@ -17,11 +17,6 @@ form {
   max-width: 420px;
 }
 
-a,
-a:visited {
-  color: black;
-}
-
 input[type="text"],
 input[type="password"],
 button,
