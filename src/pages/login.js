@@ -1,12 +1,13 @@
-import { useRef, useState, useEffect, useContext } from "react";
+import { useRef, useState, useEffect } from "react";
+import { useAuth } from "../context/authprovider";
 import React from "react";
 import { Link } from "react-router-dom";
 import "./register.css";
 
 const Login = () => {
-  //const { setAuth } = useContext(AuthContext);
   const userRef = useRef();
   const errRef = useRef();
+  const auth = useAuth();
 
   const [user, setUser] = useState("");
   const [pwd, setPwd] = useState("");
@@ -23,8 +24,7 @@ const Login = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setUser("");
-    setPwd("");
+    auth.Login(user);
     setSuccess(true);
   };
 

@@ -10,6 +10,7 @@ import Dashboard from "./pages/dashboard";
 import Login from "./pages/login";
 import Sidebarmenu from "./components/Sidebarmenu";
 import Register from "./pages/register";
+import { RequireAuth } from "./components/RequireAuth";
 
 function App() {
   return (
@@ -26,7 +27,14 @@ function App() {
             <Route path="/About" element={<About />} />
             <Route path="/Channels" element={<Channels />} />
             <Route path="/Donate" element={<Donate />} />
-            <Route path="/Dashboard" element={<Dashboard />} />
+            <Route
+              path="/Dashboard"
+              element={
+                <RequireAuth>
+                  <Dashboard />
+                </RequireAuth>
+              }
+            />
             <Route path="/Login" element={<Login />} />
             <Route path="/Register" element={<Register />} />
           </Routes>
