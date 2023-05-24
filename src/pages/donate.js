@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router";
+import { useAuth } from "../context/authprovider";
 import "./donate.css";
 const Donate = (props) => {
   let channel = useLocation();
+  const auth = useAuth();
   const [inputs, setInputs] = useState({});
   const [disabled, setDisabled] = useState(false);
   const handleChange = (event) => {
@@ -23,6 +25,11 @@ const Donate = (props) => {
       setDisabled(true);
     }
   }, [channel.state]);
+  useEffect(() => {
+    if (auth.user) {
+      setInputs({ username: auth.user });
+    }
+  }, [auth.user]);
 
   return (
     <div>
