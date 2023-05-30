@@ -3,7 +3,7 @@ import { useLocation } from "react-router";
 import { useAuth } from "../context/authprovider";
 import "./donate.css";
 const Donate = (props) => {
-  let channel = useLocation();
+  const channel = useLocation();
   const auth = useAuth();
   const [inputs, setInputs] = useState({});
   const [disabled, setDisabled] = useState(false);
@@ -21,13 +21,13 @@ const Donate = (props) => {
   };
   useEffect(() => {
     if (channel.state) {
-      setInputs({ channelname: channel.state });
+      setInputs(value =>({ ...value,channelname: channel.state }));
       setDisabled(true);
     }
   }, [channel.state]);
   useEffect(() => {
     if (auth.user) {
-      setInputs({ username: auth.user });
+      setInputs(value =>({ ...value, username: auth.user }));
     }
   }, [auth.user]);
 
@@ -40,7 +40,7 @@ const Donate = (props) => {
           <input
             type="text"
             name="channelname"
-            value={inputs.channelname || ""}
+            value={inputs.channelname ?? ''}
             onChange={handleChange}
             disabled={disabled}
           />
